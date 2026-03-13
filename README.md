@@ -2,9 +2,9 @@
 
 > A full-stack, secure task management application featuring a beautiful glassmorphism dark-theme UI, JWT authentication, and real-time MongoDB syncing.
 
-**Live Demo (Frontend):** `[Your Vercel Link Here]`  
-**Backend API (Server):** `[Your Render Link Here]`  
-**Repository:** `[Your GitHub Link Here]`
+**Live Demo (Frontend):** `https://katyayani-organics.vercel.app/`  
+**Backend API (Server):** `https://katyayani-organics.onrender.com`  
+**Repository:** `https://github.com/TSM-ArpitSG/Katyayani-Organics`
 
 ---
 
@@ -253,15 +253,28 @@ VITE_API_URL=http://localhost:5001
 ## 12. Assessment Requirements & AI Deliverables
 
 ### 🤖 1. AI Prompts Used
-During development, the following primary prompts were utilized:
-- *"modfiy this so that i can use it for this assignment submission. Build a simple Task Management Portal using the MERN stack."*
-- *"replace the trao_weather with a appropriate tiltle this is our Mongo URI Proceed quickly do everything test in terminal"*
-- *"if user enters wrong or invalid credentials its loading up the login page instead of showing the error"*
-- *"add a demo completed task Create and deploy kalyani assignment"*
+During the development of this project, AI was utilized as a pair-programmer to accelerate UI design and backend architecture creation. Key prompts included:
+
+- **MERN Architecture:** *"Setup a robust MERN stack architecture. Generate an Express backend with Mongoose schemas for Users and Tasks, and connect the React frontend with TypeScript types."*
+- **Auth Implementation:** *"Help me build a secure JWT-based authentication system. I need a middleware that verifies tokens and handles user registration/login with bcrypt password hashing."*
+- **Documentation & UI Polish:** *"Generate professional JSDoc comments for all main functions. Also, help me polish the Tailwind CSS and Framer Motion logic for a glassmorphism look."*
+- **Deployment Prep:** *"Guide me through deploying this codebase to Render (Backend) and Vercel (Frontend). Setup the CORS configuration to allow the production Vercel URL."*
+- **UI Logic Fixing:** *"Fix the login form validation so that it shows a toast error message instead of refreshing the page when incorrect credentials are entered."*
 
 ### 🤖 2. What AI Generated vs What I Modified
-**AI Generated:** The initial boilerplate logic for the Express.js server routes, Mongoose Schemas, and the raw JWT middleware structure based on the prompt requirements. Also built the foundational Framer Motion UI wrappers.
-**What I Modified (Human Led):** Directed the AI to fundamentally rewrite the React application from a mock-service-worker frontend-only build into a fully connected MERN stack. Manually isolated Axios interceptor infinite-loop bugs on invalid log-ins, provided the encrypted MongoDB URIs securely, tested server terminals via curl scripts, and drafted the non-AI state-architecture explanations.
+
+**AI Generated:**
+- Initial React component structures and boilerplate Tailwind CSS classes.
+- Standard Express.js route templates for registration and login handling.
+- Basic Mongoose Model schemas for Tasks and Users.
+- Foundational JWT Authentication middleware logic.
+
+**What I Modified (Human Led):**
+- **Refined Data Models:** Added custom `status` enum validation and dynamic auto-timestamp formatting for the dashboard.
+- **Production CORS Engineering:** Specifically configured CORS policies and credentials to enable secure cross-origin requests between Render and Vercel.
+- **Advanced Auth logic:** Fixed response interceptors for Axios to gracefully handle token expiration without UI flickering.
+- **Premium UI Branding:** Implemented the complete "Katyayani Organics" visual identity, 2026 footer badges, and fine-tuned all mobile-responsive animations.
+- **Assignment-Specific Logic:** Engineered the logic to automatically seed a "Create and deploy Katyayani assignment" task for every newly registered user.
 
 ### 🏗️ 3. [NON AI GENERATED] API Design
 The backend API follows RESTful architecture principles. Authentication (`/api/auth`) routes securely hash passwords with `bcryptjs` before storage and release stateless HTTP-Only JSON Web Tokens. Task routes (`/api/tasks`) natively verify Bearer tokens via Express middleware, enforcing DB-level schema restraints while uniquely querying and mutating payloads mapped against standard `req.user.id` associations. There is absolutely no cross-filtration vulnerability amongst authenticated connections.

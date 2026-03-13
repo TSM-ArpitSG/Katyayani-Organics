@@ -209,7 +209,7 @@ export default function LoginPage() {
               </Link>
             </p>
             <p className="text-xs text-gray-500 dark:text-gray-400">
-              Built for Katyayani Organics • 2025
+              Built for Katyayani Organics • 2026
             </p>
           </motion.div>
         </div>
