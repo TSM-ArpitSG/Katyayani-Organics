@@ -237,16 +237,16 @@ VITE_API_URL=http://localhost:5001
 ## 11. Screenshots
 
 ### Login Page
-![Login View](./Videos&Screenshots/login.png)
+![Login View](./screenshot/login.png)
 
 ### Dashboard - Light Mode
-![Dashboard Light](./Videos&Screenshots/dashboard-light.png)
+![Dashboard Light](./screenshot/dashboard-light.png)
 
 ### Dashboard - Dark Mode
-![Dashboard Dark](./Videos&Screenshots/dashboard-dark.png)
+![Dashboard Dark](./screenshot/dashboard-dark.png)
 
 ### Task Modal
-![Task Modal](./Videos&Screenshots/task-form.png)
+![Task Modal](./screenshot/task-form.png)
 
 ---
 
