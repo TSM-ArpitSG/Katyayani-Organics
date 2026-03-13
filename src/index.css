@@ -1,0 +1,99 @@
+/**
+ * Global Styles
+ * 
+ * @author Arpit Singh
+ * @description Global CSS with Tailwind utilities, dark mode, and custom styles.
+ * Includes custom scrollbar and toast animations.
+ */
+
+/* Tailwind CSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Base layer - Global element styling
+ */
+@layer base {
+
+  /* Body with dark mode support */
+  body {
+    @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/**
+ * Utilities layer - Custom utility classes
+ */
+@layer utilities {
+
+  /* Text balance for better typography */
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/**
+ * Custom Scrollbar Styling
+ * 
+ * @description
+ * Minimal, modern scrollbar with dark mode support.
+ * Uses rounded design matching the app's aesthetic.
+ */
+
+/* Scrollbar size */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+/* Scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+/* Scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
+
+
+/**
+ * Custom Toast Animations
+ * 
+ * @description
+ * Smooth enter/exit animations for react-hot-toast notifications.
+ * Provides scale and fade effects for polished UX.
+ */
+
+/* Toast enter animation - Scale up and fade in */
+@keyframes toast-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Toast exit animation - Scale down and fade out */
+@keyframes toast-exit {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
